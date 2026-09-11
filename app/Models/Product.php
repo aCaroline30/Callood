@@ -5,8 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+
+
 class Product extends Model
 {
+    protected $table = 'product';
     protected $fillable = [
         'name',
         'image',

@@ -22,9 +22,11 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
+        
         Product::create($request->validated());
 
-        return redirect()->route('products.index')->with('success', 'Produto criado com sucesso.');
+       
+        return redirect()->route('products.index');
     }
 
     public function show(Product $product)
