@@ -16,11 +16,7 @@ class StoreAddressRequest extends FormRequest
         return [
             'street'       => ['required', 'string', 'max:255'],
             'number'       => ['required', 'string', 'max:20'],
-            'complement'   => ['nullable', 'string', 'max:255'],
-            'neighborhood' => ['required', 'string', 'max:255'],
             'city'         => ['required', 'string', 'max:255'],
-            'state'        => ['required', 'string', 'size:2'],
-            'zip_code'     => ['required', 'string', 'max:10'],
         ];
     }
 }

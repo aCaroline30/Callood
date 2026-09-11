@@ -11,10 +11,10 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="text-xl font-bold">🛒 Callood</a>
             <div class="space-x-4">
-                <a href="{{ route('products.index') }}" class="hover:underline">Produtos</a>
-                <a href="{{ route('customers.index') }}" class="hover:underline">Clientes</a>
-                <a href="{{ route('addresses.index') }}" class="hover:underline">Endereços</a>
-                <a href="{{ route('orders.index') }}" class="hover:underline">Pedidos</a>
+                <a href="{{ route('product.index') }}" class="hover:underline">Produtos</a>
+                <a href="{{ route('customer.index') }}" class="hover:underline">Clientes</a>
+                <a href="{{ route('address.index') }}" class="hover:underline">Endereços</a>
+                <a href="{{ route('order.index') }}" class="hover:underline">Pedidos</a>
             </div>
         </div>
     </nav>

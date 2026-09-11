@@ -10,11 +10,7 @@ class Address extends Model
     protected $fillable = [
         'street',
         'number',
-        'complement',
-        'neighborhood',
         'city',
-        'state',
-        'zip_code',
     ];
 
     public function orders(): HasMany

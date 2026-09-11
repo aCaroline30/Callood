@@ -16,11 +16,7 @@ class UpdateAddressRequest extends FormRequest
         return [
             'street'       => ['sometimes', 'required', 'string', 'max:255'],
             'number'       => ['sometimes', 'required', 'string', 'max:20'],
-            'complement'   => ['sometimes', 'nullable', 'string', 'max:255'],
-            'neighborhood' => ['sometimes', 'required', 'string', 'max:255'],
             'city'         => ['sometimes', 'required', 'string', 'max:255'],
-            'state'        => ['sometimes', 'required', 'string', 'size:2'],
-            'zip_code'     => ['sometimes', 'required', 'string', 'max:10'],
         ];
     }
 }

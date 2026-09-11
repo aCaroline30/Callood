@@ -11,7 +11,7 @@ Route::get('/', function () {
     return redirect()->route('products.index');
 });
 
-Route::resource('products', ProductController::class);
-Route::resource('customers', CustomerController::class);
-Route::resource('addresses', AddressController::class);
-Route::resource('orders', OrderController::class);
+Route::resource('product', ProductController::class);
+Route::resource('customer', CustomerController::class);
+Route::resource('address', AddressController::class);
+Route::resource('order', OrderController::class);

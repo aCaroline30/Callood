@@ -12,12 +12,12 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('products.index', compact('products'));
+        return view('product.index', compact('products'));
     }
 
     public function create()
     {
-        return view('products.create');
+        return view('product.create');
     }
 
     public function store(StoreProductRequest $request)
@@ -26,30 +26,30 @@ class ProductController extends Controller
         Product::create($request->validated());
 
        
-        return redirect()->route('products.index');
+        return redirect()->route('product.index');
     }
 
     public function show(Product $product)
     {
-        return view('products.show', compact('product'));
+        return view('product.show', compact('product'));
     }
 
     public function edit(Product $product)
     {
-        return view('products.edit', compact('product'));
+        return view('product.edit', compact('product'));
     }
 
     public function update(UpdateProductRequest $request, Product $product)
     {
         $product->update($request->validated());
 
-        return redirect()->route('products.index')->with('success', 'Produto atualizado com sucesso.');
+        return redirect()->route('product.index')->with('success', 'Produto atualizado com sucesso.');
     }
 
     public function destroy(Product $product)
     {
         $product->delete();
 
-        return redirect()->route('products.index')->with('success', 'Produto removido com sucesso.');
+        return redirect()->route('product.index')->with('success', 'Produto removido com sucesso.');
     }
 }

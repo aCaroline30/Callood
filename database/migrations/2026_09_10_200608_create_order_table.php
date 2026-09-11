@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id')->constrained('customers')->onDelete('cascade');
-            $table->foreignId('address_id')->constrained('addresses')->onDelete('cascade');
+            $table->foreignId('customer_id')->constrained('customer')->onDelete('cascade');
+            $table->foreignId('address_id')->constrained('address')->onDelete('cascade');
+
             $table->string('status')->default('pending');
             $table->timestamps();
         });

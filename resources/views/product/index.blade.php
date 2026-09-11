@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex justify-between items-center mb-6">
     <h1 class="text-2xl font-bold text-gray-800">Produtos</h1>
-    <a href="{{ route('products.create') }}" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">Novo Produto</a>
+    <a href="{{ route('product.create') }}" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700">Novo Produto</a>
 </div>
 
 <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -23,11 +23,13 @@
                 <td class="px-6 py-4 whitespace-nowrap">R$ {{ number_format($product->price, 2, ',', '.') }}</td>
                 <td class="px-6 py-4 whitespace-nowrap">{{ $product->stock }}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <a href="{{ route('products.edit', $product->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-3">Editar</a>
-                    <form action="{{ route('products.destroy', $product->id) }}" method="POST" class="inline">
+                    <a href="{{ route('product.edit', $product->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-3">Editar</a>
+                    <a href="{{ route('product.show', $product->id) }}" class="text-indigo-600 hover:text-indigo-900 mr-3">Show</a>
+                    <form action="{{ route('product.destroy', $product->id) }}" method="POST" class="inline">
                         @csrf @method('DELETE')
                         <button type="submit" class="text-red-600 hover:text-red-900" onclick="return confirm('Tem certeza?')">Excluir</button>
                     </form>
+
                 </td>
             </tr>
             @endforeach
